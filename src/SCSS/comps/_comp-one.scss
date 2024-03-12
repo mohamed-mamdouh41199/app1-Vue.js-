@@ -1,0 +1,16 @@
+@use "/src/SCSS/glopal/var" as *;
+div {
+  color: $title-color;
+  font: {
+    size: $titles-size;
+    weight: bold;
+  }
+  div .icons
+  {
+    display: flex;
+    // justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    color: $main-color;
+  }
+}

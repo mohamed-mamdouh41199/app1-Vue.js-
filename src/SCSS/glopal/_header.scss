@@ -1,0 +1,81 @@
+@use "./var" as *;
+
+nav {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: {
+      bottom: $main-margin;
+    }
+    a {
+      color: $main-color;
+      transition: $main-transition;
+      text-decoration: none;
+      &:hover {
+        color: darken($main-color, 15%);
+        transform: scale(1.2);
+      }
+  
+      &.router-link-exact-active {
+        color: $special-color;
+        font-weight: bold;
+      }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        color: $special-color;
+        font: {
+          family: "Dancing Script", cursive;
+          size: $logos-size;
+        }
+      }
+    
+      .links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+
+  @media (max-width: $XXsmall-mediaQ) {
+    nav .logo {
+        font-size: calc($logos-size/1.4);
+    }  
+}
+
+@media (max-width: $XXXsmall-mediaQ) {
+    nav {
+        .logo {
+            font-size: calc($logos-size/1.6);
+        .links {
+            gap: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $XXXXsmall-mediaQ) {
+    nav .logo {
+        font-size: calc($logos-size/1.8);
+    }  
+    nav .links {
+        gap: 6px;
+    }
+}
+
+
+@media (max-width: $tiny-mediaQ) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        gap: 20px;    
+        .logo {
+            margin-bottom: -20px;
+        }
+    }  
+}

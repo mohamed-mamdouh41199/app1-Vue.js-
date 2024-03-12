@@ -1,0 +1,138 @@
+@use "/src/SCSS/glopal/var" as *;
+.cuntry
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+input
+{
+    width: 500px;
+    height: 40px;
+    // margin: auto;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid $special-color !important;
+    padding: {
+        left: $main-padding;
+        right: $main-padding;            
+    } 
+    display: flex;
+}
+button
+{
+    width: 46px;
+    height: 36px;
+    background-color: $special-color;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;    
+    border-radius: 10px;
+    transition: $main-transition;    
+    &:hover
+    {
+        transform: scale(1.2);
+    }
+}
+.box
+{
+    // display: flex;
+    .top
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;    
+        .left
+        {
+            img
+            {
+                width: 100px;
+            }
+            h1
+            {
+                font-size: 100px;
+            }
+        }
+        .right
+        {
+            font-size: 20px;
+            font-weight: 700;
+            
+            h1
+            {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.bottom
+{
+    margin-top: 20px;        
+    align-items: center;
+    height: 300px;   
+    border-top: 1px solid  #ccc;  
+    h3
+    {
+        font-size: 25px;
+    }
+    .icons
+    {
+        font-size: 30px;
+        color: $title-color;
+        padding: {
+            top: 40px;
+        }
+        display: flex;
+        // gap: 170px;
+        // justify-content: space-between;
+        .col
+        {
+            display: flex;
+            flex-direction: column;
+            width: 170px;
+            justify-content: center;
+            align-items: center;
+            // text-align: center;
+            gap: 20px;
+            p
+            {
+                color: $main-color;
+                font-weight: 700;
+                font-size: 20px;
+
+            }
+        }
+    }
+    .uv
+    {
+        display: flex;
+    }
+}
+
+
+
+@media (max-width: $small-mediaQ) {
+    .box .top .left h1 
+   {
+        font-size: 60px;
+   }
+   
+    h3,h1
+    {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: $XXsmall-mediaQ) {
+    .bottom .icons
+    {
+        font-size: 20px;
+        .col p
+        {
+            font-size: 17px;
+        }
+    }
+}

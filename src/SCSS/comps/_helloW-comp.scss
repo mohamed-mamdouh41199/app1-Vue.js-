@@ -1,0 +1,18 @@
+@use "/src/SCSS/glopal/var" as *;
+
+div {
+    background-color: $special-color;
+    padding: 10px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: {
+        top-left-radius: 20px;
+        bottom-right-radius: 50px;
+        }
+    margin: {
+        bottom: $main-margin;
+    }
+    }

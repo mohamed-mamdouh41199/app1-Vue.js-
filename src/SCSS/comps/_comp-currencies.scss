@@ -1,0 +1,40 @@
+@use "/src/SCSS/glopal/var" as *;
+.box
+{
+    display: flex;    
+    flex-direction: column;
+    gap: 20px;
+    margin: $main-margin;
+    margin-top: $main-margin*5;
+    text-align: center;        
+    padding: $main-padding;
+    input
+    {
+        width: 500px;
+        height: 40px;
+        margin: auto;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid $special-color !important;
+        padding: {
+            left: $main-padding;
+            right: $main-padding;            
+        } 
+    }    
+    input:focus {
+        border-width: 1px;
+      }
+    select
+    {
+        width: 500px;
+        height: 40px;
+        margin: auto;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid $special-color;
+        padding: {
+            left: $main-padding;
+            right: $main-padding;
+        } 
+    }
+}
